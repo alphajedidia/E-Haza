@@ -10,49 +10,58 @@ function Login() {
               className="block bg-white rounded-lg shadow-lg dark:bg-neutral-800">
               <div className="g-0 lg:flex lg:flex-wrap">
                 <div className="px-4 md:px-0 lg:w-6/12">
-                  <div className="md:mx-6 md:p-12">
-                    <div className="text-center">
-                      <img
-                        className="w-48 mx-auto"
-                        src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                        alt="logo" />
-                      <h4 className="pb-1 mt-1 mb-12 text-xl font-semibold">
-                        We are The Lotus Team
-                      </h4>
-                    </div>
+                  <div className="md:mx-6 md:p-8">
+                  <div className="px-6 py-6 mb-0 rounded-t ">
+                  <div className="mb-3 text-center">
+                    <h6 className="text-sm font-bold text-blueGray-500">
+                      Sign in with
+                    </h6>
+                  </div>
+                  <div className="text-center btn-wrapper">
+                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-2 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md text-slate-800" type="button">
+                      <img alt="..." className="w-5 mr-1" src="https://demos.creative-tim.com/notus-js/assets/img/github.svg"/>Github</button>
+                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-1 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md text-slate-800" type="button">
+                      <img alt="..." className="w-5 mr-1" src="https://demos.creative-tim.com/notus-js/assets/img/google.svg"/>Google </button>
 
+                  </div>
+                  <div className="flex items-center justify-center mt-4">
+                    <span className="w-full border"></span>
+                    <span className="px-4">Or</span>
+                    <span className="w-full border "></span>
+                  </div>
+                  </div>
                     <form>
-                      <p className="mb-4">Please login to your account</p>
-                      <div className="relative mb-4" data-te-input-wrapper-init>
-                        <input
-                          type="text"
-                          className="peer block min-h-[auto] w-full rounded border-gray-600 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 focus:border-0 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="exampleFormControlInput1"
-                          placeholder="Username" />
+                      <div className="relative mb-1" >
                         <label
                           htmlFor="exampleFormControlInput1"
-                          className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          className="mb-6 "
                           >Username
                         </label>
+                        <input type="email"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none out text-slate-300"
+                        name="" id="" />
                       </div>
 
-                      <div className="relative mb-4" data-te-input-wrapper-init>
-                        <input type="password"
-                        className="w-full px-4 pt-2 pb-2 rounded outline-none out text-slate-900"
-                        name="" id="" />
-                        <input
-                          type="password"
-                          className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                          id="exampleFormControlInput11"
-                          placeholder="Password" />
+                      <div className="relative mb-1" >
                         <label
-                          htmlFor="exampleFormControlInput11"
-                          className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                          htmlFor="exampleFormControlInput1"
+                          className=""
                           >Password
                         </label>
+                        <input type="password"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none out text-slate-300"
+                        name="" id="" />
+                        
                       </div>
-
+                      <div className="flex items-center justify-between my-4">
+                        <div className="flex items-center">
+                          <input id="remember_me" type="checkbox" className="border border-gray-300 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" />
+                          <label htmlFor="remember_me" className="block ml-2 text-sm leading-5 "> Remember me </label>
+                        </div>
+                        <a href="#" className="text-sm underline"> Forgot your password? </a>
+                      </div>
                       <div className="pt-1 pb-1 mb-12 text-center">
+              
                         <button
                           className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
                           type="button"
@@ -61,10 +70,10 @@ function Login() {
                           style={{
                             background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
                           }}>
-                          Log in
+                          Sign in
                         </button>
 
-                        <a href="#!">Forgot password?</a>
+                        
                       </div>
 
                       <div className="flex items-center justify-between pb-6">
