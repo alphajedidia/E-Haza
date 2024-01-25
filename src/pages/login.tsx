@@ -1,13 +1,13 @@
 function Login() {
 
     return (
-      <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" >
+      <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" style={{background : "#003B73"}} >
       <div className="container h-full p-10">
         <div
-          className="flex flex-wrap items-center justify-center h-full text-neutral-800 dark:text-neutral-200">
+          className="flex flex-wrap items-center justify-center h-full " style={{color : "#003B73"}}>
           <div className="w-full xl:w-8/12 ">
             <div
-              className="block bg-white rounded-lg shadow-lg dark:bg-neutral-800">
+              className="block rounded-lg shadow-lg " style={{background : "rgba(191, 215, 237, 1)"}}>
               <div className="g-0 lg:flex lg:flex-wrap">
                 <div className="px-4 md:px-0 lg:w-6/12">
                   <div className="md:mx-6 md:p-8">
@@ -18,16 +18,16 @@ function Login() {
                     </h6>
                   </div>
                   <div className="text-center btn-wrapper">
-                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-2 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md text-slate-800" type="button">
+                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-2 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md " type="button">
                       <img alt="..." className="w-5 mr-1" src="https://demos.creative-tim.com/notus-js/assets/img/github.svg"/>Github</button>
-                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-1 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md text-slate-800" type="button">
+                    <button className="inline-flex items-center px-4 py-2 mb-1 mr-1 text-xs font-bold uppercase transition-all duration-150 ease-linear bg-white rounded shadow outline-none active:bg-blueGray-50 text-blueGray-700 focus:outline-none hover:shadow-md " type="button">
                       <img alt="..." className="w-5 mr-1" src="https://demos.creative-tim.com/notus-js/assets/img/google.svg"/>Google </button>
 
                   </div>
                   <div className="flex items-center justify-center mt-4">
-                    <span className="w-full border"></span>
+                    <span className="w-full border" style={{borderColor : "#003B73"}}></span>
                     <span className="px-4">Or</span>
-                    <span className="w-full border "></span>
+                    <span className="w-full border " style={{borderColor : "#003B73"}}></span>
                   </div>
                   </div>
                     <form>
@@ -38,7 +38,7 @@ function Login() {
                           >Username
                         </label>
                         <input type="email"
-                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none out text-slate-300"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
                         name="" id="" />
                       </div>
 
@@ -49,7 +49,7 @@ function Login() {
                           >Password
                         </label>
                         <input type="password"
-                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none out text-slate-300"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
                         name="" id="" />
                         
                       </div>
@@ -80,9 +80,8 @@ function Login() {
                         <p className="mb-0 mr-2">Don't have an account?</p>
                         <button
                           type="button"
-                          className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                          data-te-ripple-init
-                          data-te-ripple-color="light">
+                          className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10" style={{borderColor : "#003B73"}}
+                          >
                           Register
                         </button>
                       </div>
