@@ -1,7 +1,8 @@
-function Login() {
 
-    return (
-      <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" style={{background : "#003B73"}} >
+function Signup(){
+
+    return(
+        <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" style={{background : "#003B73"}} >
       <div className="container h-full p-10">
         <div
           className="flex flex-wrap items-center justify-center h-full " style={{color : "#003B73"}}>
@@ -11,10 +12,10 @@ function Login() {
               <div className="g-0 lg:flex lg:flex-wrap">
                 <div className="px-4 md:px-0 lg:w-6/12">
                   <div className="md:mx-6 md:p-8">
-                  <div className="px-6 py-6 mb-0 rounded-t ">
+                  <div className="py-6 mb-0 rounded-t ">
                   <div className="mb-3 text-center">
                     <h6 className="text-sm font-bold text-blueGray-500">
-                      Sign in with
+                      Sign up with
                     </h6>
                   </div>
                   <div className="text-center btn-wrapper">
@@ -26,7 +27,7 @@ function Login() {
                   </div>
                   <div className="flex items-center justify-center mt-4">
                     <span className="w-full border" style={{borderColor : "#003B73"}}></span>
-                    <span className="px-4">Or</span>
+                    <span className="px-4">Or </span>
                     <span className="w-full border " style={{borderColor : "#003B73"}}></span>
                   </div>
                   </div>
@@ -35,13 +36,22 @@ function Login() {
                         <label
                           htmlFor="exampleFormControlInput1"
                           className="mb-6 "
-                          >Username
+                          >First name
                         </label>
                         <input type="text"
                         className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
                         name="" id="" />
                       </div>
-
+                      <div className="relative mb-1" >
+                        <label
+                          htmlFor="exampleFormControlInput1"
+                          className="mb-6 "
+                          >Last name
+                        </label>
+                        <input type="text"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
+                        name="" id="" />
+                      </div>
                       <div className="relative mb-1" >
                         <label
                           htmlFor="exampleFormControlInput1"
@@ -53,13 +63,18 @@ function Login() {
                         name="" id="" />
                         
                       </div>
-                      <div className="flex items-center justify-between my-4">
-                        <div className="flex items-center">
-                          <input id="remember_me" type="checkbox" className="border border-gray-300 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" />
-                          <label htmlFor="remember_me" className="block ml-2 text-sm leading-5 "> Remember me </label>
-                        </div>
-                        <a href="#" className="text-sm underline"> Forgot your password? </a>
+                      <div className="relative mb-4" >
+                        <label
+                          htmlFor="exampleFormControlInput1"
+                          className=""
+                          >Confirm password
+                        </label>
+                        <input type="password"
+                        className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
+                        name="" id="" />
+                        
                       </div>
+                      
                       <div className="pt-1 pb-1 mb-12 text-center">
               
                         <button
@@ -70,19 +85,19 @@ function Login() {
                           style={{
                             background: 'linear-gradient(to right, #2178c0, #1b52c0, #1b388d )',
                           }}>
-                          Sign in
+                          Sign up
                         </button>
 
                         
                       </div>
 
                       <div className="flex items-center justify-between pb-6">
-                        <p className="mb-0 mr-2">Don't have an account?</p>
+                        <p className="mb-0 mr-2">Already have an account?</p>
                         <button
                           type="button"
                           className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10" style={{borderColor : "#003B73"}}
                           >
-                          Register
+                          Sign in
                         </button>
                       </div>
                     </form>
@@ -114,6 +129,5 @@ function Login() {
       </div>
     </section>
     )
-  }
-  
-  export default Login
+}
+export default Signup
