@@ -1,7 +1,7 @@
 function Login() {
 
     return (
-      <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-neutral-700">
+      <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" >
       <div className="container h-full p-10">
         <div
           className="flex flex-wrap items-center justify-center h-full text-neutral-800 dark:text-neutral-200">
@@ -68,7 +68,7 @@ function Login() {
                           data-te-ripple-init
                           data-te-ripple-color="light"
                           style={{
-                            background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
+                            background: 'linear-gradient(to right, #2178c0, #1b52c0, #1b388d )',
                           }}>
                           Sign in
                         </button>
@@ -93,7 +93,7 @@ function Login() {
                 <div
                   className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none"
                   style={{
-                    background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
+                    background: 'linear-gradient(to right, #2178c0, #1b52c0, #1b388d, #000329)',
                   }}>
                   <div className="px-4 py-6 text-white md:mx-6 md:p-12">
                     <h4 className="mb-6 text-xl font-semibold">
