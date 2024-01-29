@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .circular-animated {
+       @apply w-5 h-5 bg-transparent rounded-full  border-b-2 border-l-2  border-gray-200 animate-spin duration-500
+    }
+  
+    .btn {
+      @apply h-12 flex justify-center items-center gap-2 py-2 px-5 rounded-lg
+    }
+  
+      .input {
+          @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3
+      }
+  
+      .label {
+          @apply block mb-2 font-medium text-gray-900 text-opacity-75
+      }
+    .btn-large {
+      @apply w-large
+    }
+  
+    .btn-small {
+      @apply w-small
+    }
+  
+    .btn-medium {
+      @apply w-medium
+    }
+    .nav-link{
+      @apply w-full flex justify-around  items-center px-5 py-3 gap-3 rounded-lg text-colorScheme-light-secondary text-lg duration-300 ease-in-out
+    }
+    .active{
+      @apply text-colorScheme-light-primary bg-colorScheme-light-orange hover:opacity-80
+    }
+    .btn-primary {
+      @apply bg-colorScheme-light-orange text-colorScheme-light-primary
+    }
+  
+    .btn-secondary {
+      @apply bg-transparent border-colorScheme-light-orange border-[1px] text-colorScheme-light-orange
+    }
+    .btn-disabled {
+      @apply disabled:opacity-80 disabled:cursor-not-allowed
+    }
+    .center-link {
+      @apply bg-colorScheme-light-orange rounded-full
+    }
+}
+.ReactQueryDevtools{
+  display: none;
+}
+
+.preview{
+  @apply w-full object-cover
+}
+:root{
+    --colorSheme-primary:#333;
+    --colorSheme-secondary:#333;
+    --colorSheme-black:#333;
+    --colorSheme-white:#333;
+
+    --text-colorSheme-light-primary:#333;
+    --text-colorSheme-light-secondary:#476;
+
+    --btn-bg-primary:#f00;
+    --btn-bg-primary-hover:#f00;
+    --btn-bg-secondary:#f00;
+    
+    --btn-text-primary:#333;
+    --btn-text-secondary:#333;
+
+    color-scheme: light dark;
+    background-color: #f2f2f2;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
