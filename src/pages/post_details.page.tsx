@@ -65,42 +65,42 @@ export const PostDetailPage = ()=>{
     const comments:IComment[]=[
         {
             comment_id:'1',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh slkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
         },
         {
             comment_id:'2',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh slkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
         },
         {
             comment_id:'3',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh slkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
         },
         {
             comment_id:'4',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh dsgdsf sfd fsdfs fdfsfsf sfsf sfsf s fsf sfsf sdfsfsfsfsfsf sfsfs fsfsfs fsff s f sslkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
         },
         {
             comment_id:'5',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh slkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
         },
         {
             comment_id:'6',
-            comment_date:'now',
+            comment_date:'Just now',
             comment_content:'dfjsldf skfh slkfhdslf kshdflshf sfs fsf sfsdfsf s',
             username:post?.username!,
             profile_url:post?.profile_url!
