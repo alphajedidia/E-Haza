@@ -1,11 +1,15 @@
-import Login from "./pages/login"
-import Signup from "./pages/signup"
+import { AppRoutes } from './routes';
+import { AppProvider } from './provider/app.provider';
+
+
+
 function App() {
 
-  return (<>
-    <Login/>
-    <Signup/>
-  </>)
+  return (
+    <AppProvider>
+      <AppRoutes/>
+    </AppProvider>
+  )
 }
 
 export default App
