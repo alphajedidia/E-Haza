@@ -1,26 +1,22 @@
 import { Button, ButtonGroup } from '@mui/material';
 import Avatar from '../avatar/avatar';
 import CollectionsIcon from '@mui/icons-material/Collections';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
-import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { IMedia, IPost } from '../../types/post';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination} from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { useState } from 'react';
 
 type PostCardProps = {
     post:IPost
     linkOn:boolean
 }
+
 export const PostCard = (props:PostCardProps)=>{
     const {post:{username, post_content, reaction_count, comment_count, media_count, post_id, profile_url, media_first}, linkOn} = props
-    const [react, setReact] = useState<boolean>(false)
     const navigate = useNavigate()
+    const [react, setReact] = useState<boolean>(false)
 
     const medias:IMedia[] = [
         {
@@ -51,7 +47,7 @@ export const PostCard = (props:PostCardProps)=>{
     ]
 
     return (
-        <div className="flex flex-col w-full rounded-md bg-white text-colorScheme-light-charcoal border-b-[1px] border-gray-200">
+        <div className="flex flex-col w-full rounded-md bg-white text-colorScheme-light-charcoal border-b-[1px] border-gray-200" >
             <div className="w-full flex flex-row justify-between p-2">
                 {
                     linkOn?
@@ -66,9 +62,21 @@ export const PostCard = (props:PostCardProps)=>{
                         <h2 className='font-bold text-xl'>{username}</h2>
                     </div>
                 }
-                <div className="cursor-pointer">
-                    <MoreHorizIcon/>
-                </div>
+                {/* <div className="cursor-pointer">
+                    <span onClick={toggleDrawer(anchor, true)}>
+                        <MoreHorizIcon />
+                    </span>
+                    <div className="" onClick={toggleDrawer(anchor, false)}>
+                        <SwipeableDrawer
+                            anchor={anchor}
+                            open={state[anchor]}
+                            onClose={toggleDrawer(anchor,false)}
+                            onOpen={toggleDrawer(anchor,true)}
+                        >
+                            <PostDrawerMenu drawerMenus={drawerMenus}/>
+                        </SwipeableDrawer>
+                    </div>
+                </div> */}
             </div>
             {
                 linkOn?
