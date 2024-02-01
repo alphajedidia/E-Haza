@@ -1,5 +1,4 @@
 import { UseErrorBoundaryApi } from "react-error-boundary";
-import { ActionButtonProps } from "./button.type";
 import Avatar from "../avatar/avatar";
 
 type CreatePostBtnProps = {

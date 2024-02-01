@@ -140,13 +140,12 @@ export const PostCardDetails = (props:PostCardProps)=>{
                                 </div>                             
                                 :
                                 <Swiper
-                                    style={{
-                                        '--swiper-pagination-color': '#fff',
-                                    }}
+                                    // style={{
+                                    //     '--swiper-pagination-color': '#fff',
+                                    // }}
                                     modules={[Pagination]}
                                     pagination={{clickable: true}}
                                     loop={false}
-                                    lazy={true}
                                 >
                                     {
                                         medias?.map((media:IMedia, index:number) =>(
