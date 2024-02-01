@@ -5,7 +5,7 @@ import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { Link, useNavigate } from 'react-router-dom';
-import { IMedia, IPost } from '../../types/post';
+import { IPost } from '../../types/post';
 import { useState } from 'react';
 
 type PostCardProps = {
@@ -18,33 +18,33 @@ export const PostCard = (props:PostCardProps)=>{
     const navigate = useNavigate()
     const [react, setReact] = useState<boolean>(false)
 
-    const medias:IMedia[] = [
-        {
-            media_id:'1',
-            media_name:'media1',
-            media_type:'image/jpeg',
-            media_url:'/src/assets/media1.jpg'
-        },
-        {
-            media_id:'2',
-            media_name:'media2',
-            media_type:'image/jpeg',
-            media_url:'/src/assets/media2.jpg'
-        },
-        {
-            media_id:'3',
-            media_name:'media3',
-            media_type:'image/jpeg',
-            media_url:'/src/assets/media3.jpg'
-        },
-        {
-            media_id:'4',
-            media_name:'back',
-            media_type:'image/jpeg',
-            media_url:'/src/assets/back.jpg'
-        },
+    // const medias:IMedia[] = [
+    //     {
+    //         media_id:'1',
+    //         media_name:'media1',
+    //         media_type:'image/jpeg',
+    //         media_url:'/src/assets/media1.jpg'
+    //     },
+    //     {
+    //         media_id:'2',
+    //         media_name:'media2',
+    //         media_type:'image/jpeg',
+    //         media_url:'/src/assets/media2.jpg'
+    //     },
+    //     {
+    //         media_id:'3',
+    //         media_name:'media3',
+    //         media_type:'image/jpeg',
+    //         media_url:'/src/assets/media3.jpg'
+    //     },
+    //     {
+    //         media_id:'4',
+    //         media_name:'back',
+    //         media_type:'image/jpeg',
+    //         media_url:'/src/assets/back.jpg'
+    //     },
 
-    ]
+    // ]
 
     return (
         <div className="flex flex-col w-full rounded-md bg-white text-colorScheme-light-charcoal border-b-[1px] border-gray-200" >

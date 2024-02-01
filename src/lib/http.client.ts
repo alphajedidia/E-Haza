@@ -13,7 +13,7 @@ export  class HttpClient {
 
     private static  client(): AxiosInstance {
         const axiosConfig: AxiosRequestConfig = {
-            baseURL: "http://localhost:9999",
+            baseURL: "http://192.168.43.66:8000/api",
 
         }
         let axiosInstance = axios.create(axiosConfig)

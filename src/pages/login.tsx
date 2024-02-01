@@ -1,5 +1,37 @@
-function Login() {
+import { useState } from "react"
+import { useLogin } from "../hooks/useAuth";
+import { useUserHook } from "../hooks/user.hooks";
+import { localStorageService } from "../services";
+import { Params } from "../utils/params";
+import { Navigate } from "react-router-dom";
+import { AxiosError } from "axios";
+import { IAuthDto } from "../constant/auth.params";
 
+export const Login=()=> {
+  const { mutate, data, isError, error , isSuccess } = useLogin();
+    const [password, setPassword] = useState<string>("")
+    const [username, setUsername] = useState<string>("")
+    const handleNameChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+      let value = e.target.value
+      setUsername(value)
+    }
+    const handlePassChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+      let value = e.target.value
+      setPassword(value)
+    }
+    const handleLogin =  ()=>{
+      const inputs:IAuthDto = {password:password, username:username}
+      console.log(inputs);
+      // const loginData = {...inputs, withRefreshToken:true}
+      mutate(inputs)
+      // authService.login(inputs)
+    }
+    // const {setUserAuthenticated} = useUserHook()
+    if(isSuccess){
+      // localStorageService.setItem(Params.KEY_ACCESS_TOKEN, data?.data.token)
+      // setUserAuthenticated()
+      return <Navigate to="/"/>
+    }
     return (
       <section className="flex justify-center h-screen gradient-form bg-neutral-200 dark:bg-slate-900" style={{background : "#003B73"}} >
       <div className="container h-full p-10">
@@ -30,7 +62,14 @@ function Login() {
                     <span className="w-full border " style={{borderColor : "#003B73"}}></span>
                   </div>
                   </div>
-                    <form>
+                    <form /* onSubmit={handleLogin} */>
+                    <div>
+                      {
+                          isError && (
+                              <p>{(error as AxiosError)?.message}</p>
+                          )
+                      }
+                  </div>
                       <div className="relative mb-1" >
                         <label
                           htmlFor="exampleFormControlInput1"
@@ -39,7 +78,8 @@ function Login() {
                         </label>
                         <input type="text"
                         className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
-                        name="" id="" />
+                        onChange={handleNameChange}
+                        name="username" id="" />
                       </div>
 
                       <div className="relative mb-1" >
@@ -49,8 +89,9 @@ function Login() {
                           >Password
                         </label>
                         <input type="password"
+                        onChange={handlePassChange}
                         className="w-full px-4 pt-2 pb-2 mt-2 bg-transparent border rounded outline-none " style={{borderColor : "rgba(0, 59, 115, 0.4)"}}
-                        name="" id="" />
+                        name="password" id="" />
                         
                       </div>
                       <div className="flex items-center justify-between my-4">
@@ -65,6 +106,7 @@ function Login() {
                         <button
                           className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
                           type="button"
+                          onClick={handleLogin}
                           data-te-ripple-init
                           data-te-ripple-color="light"
                           style={{
@@ -115,5 +157,3 @@ function Login() {
     </section>
     )
   }
-  
-  export default Login
