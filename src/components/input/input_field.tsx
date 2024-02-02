@@ -14,17 +14,17 @@ type InputProps = {
 export const InputField = (props:InputProps)=> {
     const {label, name, iconStart,iconEnd, placeholder, style, onChanged, type} = props
     return (
-        <div className="w-full flex flex-col">
+        <div className="flex flex-col w-full">
             {
                 label && (
-                    <label htmlFor={name} className="label">
+                    <label htmlFor={name} className="label" >
                         {label}
                     </label>
                 )
             }
-            <div className="flex-1 relative">
+            <div className="relative flex-1">
                 {
-                    iconStart && <span className="absolute left-0 top-1/2 -translate-y-1/2 px-5">
+                    iconStart && <span className="absolute left-0 px-5 -translate-y-1/2 top-1/2">
                         {iconStart}
                     </span>
                 }
@@ -33,7 +33,7 @@ export const InputField = (props:InputProps)=> {
                     id={name}
                     placeholder={placeholder}
                     onChange={onChanged}
-                    className={clsx(
+                    className={ clsx(
                         "input",
                         {
                             "px-16": iconStart,
@@ -42,7 +42,7 @@ export const InputField = (props:InputProps)=> {
                     )}
                 />
                 {
-                    iconEnd && <span className="absolute top-1/4  right-0 px-2">
+                    iconEnd && <span className="absolute right-0 px-2 top-1/4">
                         {iconEnd}
                     </span>
                 }
