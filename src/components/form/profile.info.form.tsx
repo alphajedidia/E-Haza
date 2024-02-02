@@ -12,15 +12,15 @@ export const ProfileForm = ()=>{
     const user:IUser = {
         user_id:'1',
         email:'user@example.com',
-        profileurl:'/src/assets/100790.png',
+        profil_url:'/src/assets/100790.png',
         username:'Cujoh Jolyne',
-        dob:'23/09/2004',
+        date_of_birth:'23/09/2004',
         gender:'female',
-        createAt:'27 Jan 2024'
+        created_at:'27 Jan 2024'
     }
     return(
         <div className="flex flex-col items-center space-y-4 m-4">
-            <ProfileInput previewed={false} size={140} url={user.profileurl}/>
+            <ProfileInput previewed={false} size={140} url={user.profil_url}/>
             <div className="bg-gray-300 bg-opacity-50 rounded-2xl p-5 mx-10 w-full flex flex-col space-y-1">
                 <h2 className="pl-3 text-colorScheme-light-charcoal text-opacity-70 font-semibold">General information</h2>
                 <div className="pt-2">
@@ -29,7 +29,7 @@ export const ProfileForm = ()=>{
                 </div>
                 <div className="pt-2">
                     <span className="text-sm pl-4 text-colorScheme-light-charcoal text-opacity-70">Date of birth</span>
-                    <DynamicInput type="date" style='text-lg font-semibold ' content={user.dob} label={user.dob}/>
+                    <DynamicInput type="date" style='text-lg font-semibold ' content={user.date_of_birth} label={user.date_of_birth}/>
                 </div>
                 <div className="pt-2">
                     <span className="text-sm pl-4 text-colorScheme-light-charcoal text-opacity-70">Gender</span>
@@ -47,7 +47,7 @@ export const ProfileForm = ()=>{
                 <h2 className="pl-3 text-colorScheme-light-charcoal text-opacity-70 font-semibold">Account information</h2>
                 <div className="pt-2 flex flex-col space-y-2">
                     <span className="text-sm pl-4 text-colorScheme-light-charcoal text-opacity-70">{`${app_name} member since`}</span>
-                    <h2 className="pl-4 pb-4 text-colorScheme-light-charcoal text-lg font-semibold">{user.createAt}</h2>
+                    <h2 className="pl-4 pb-4 text-colorScheme-light-charcoal text-lg font-semibold">{user.created_at}</h2>
                 </div>
             </div>
             <div className="bg-gray-300 bg-opacity-50 rounded-2xl p-5 mx-10 pb-3 w-full flex flex-col space-y-2 justify-between">

@@ -1,3 +1,4 @@
+
 function Login() {
   return (
     <section
@@ -14,6 +15,7 @@ function Login() {
                 style={{ background: 'rgba(191, 215, 237, 1)',color: '#003B73' }}  
                 >
                 <div className="px-4 md:px-0 lg:w-6/12">
+
                   <div className="md:mx-2 md:p-6 xl:my-8 2xl:my-12">
                     <div className="py-4 mb-0 rounded-t ">
                       <div className="mb-3 text-center">
@@ -72,8 +74,6 @@ function Login() {
                           name=""
                           id=""
                         />
-                      </div>
-
                       <div className="relative mb-1">
                         <label htmlFor="exampleFormControlInput1" className="">
                           Password
@@ -85,6 +85,7 @@ function Login() {
                           name=""
                           id=""
                         />
+
                       </div>
                       <div className="flex items-center justify-between my-4">
                         <div className="flex items-center">
@@ -110,6 +111,7 @@ function Login() {
                         <button
                           className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
                           type="button"
+                          onClick={handleLogin}
                           data-te-ripple-init
                           data-te-ripple-color="light"
                           style={{
@@ -159,3 +161,4 @@ function Login() {
 }
 
 export default Login;
+

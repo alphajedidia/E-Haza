@@ -1,0 +1,1 @@
+export const baseClientUrl = "http://localhost:5173"
