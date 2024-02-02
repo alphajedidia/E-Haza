@@ -13,7 +13,7 @@ type InputProps = {
 export const PasswordInput = (props:InputProps)=> {
     const {label, name, iconStart,iconEnd, placeholder, style, onChanged, isShown} = props
     return (
-        <div className="w-full flex flex-col">
+        <div className="flex flex-col w-full">
             {
                 label && (
                     <label htmlFor={name} className="label">
@@ -21,9 +21,9 @@ export const PasswordInput = (props:InputProps)=> {
                     </label>
                 )
             }
-            <div className="flex-1 relative">
+            <div className="relative flex-1">
                 {
-                    iconStart && <span className="absolute left-0 top-1/2 -translate-y-1/2 px-5">
+                    iconStart && <span className="absolute left-0 px-5 -translate-y-1/2 top-1/2">
                         {iconStart}
                     </span>
                 }
@@ -42,7 +42,7 @@ export const PasswordInput = (props:InputProps)=> {
                     )}
                 />
                 {
-                    iconEnd && <span className="absolute bottom-1/4 right-0 px-3 cursor-pointer">
+                    iconEnd && <span className="absolute right-0 px-3 cursor-pointer bottom-1/4">
                         {iconEnd}
                     </span>
                 }

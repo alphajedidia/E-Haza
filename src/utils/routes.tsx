@@ -9,6 +9,10 @@ export const Links = [
         icon: <Home style={{fontSize:32}}/>
     },
     {
+        to : "/login",
+        label:"login"
+    },
+    {
         to:"/message",
         label:"Message",
         icon: <QuestionAnswerRounded style={{fontSize:30}}/>

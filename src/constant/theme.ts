@@ -13,7 +13,8 @@ export const theme = {
         },
         "text":{
             "secondary":"#7869ad",
-            "primary":"#0d0d0d"
+            "primary":"#0d0d0d",
+            "blueTheme" : "#003B73"
         },
         "button":{
             "primary":"#4578d7"

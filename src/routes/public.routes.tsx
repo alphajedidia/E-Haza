@@ -1,14 +1,24 @@
 import { RouteObject } from "react-router-dom";
-import Signup from "../pages/signup";
-import { Login } from "../pages/login";
+import LoginLayout from "../components/layout/login.layout";
+import SignUpLayout from "../components/layout/signUp.layout";
+
+
 
 export const publicRoutes: RouteObject[] = [
+
     {
-        path:"auth/login/*",
-        element: <Login/>
-    },
-    {
-        path:"auth/signup/*",
-        element: <Signup/>
+        path:"auth/*",
+        children:[
+            {
+                path:"login/*",
+                element: <LoginLayout/>,
+            },
+            {
+                path:"signup/*",
+                element: <SignUpLayout/>
+            },
+   
+        ]
+
     },
 ]

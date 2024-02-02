@@ -28,7 +28,8 @@ export default {
             "orange": theme.light.background.orange,
             "charcoal": theme.light.background.charcoal,
             "greeno": theme.light.background.greenLite,
-            "yellow": theme.light.background.yellow
+            "yellow": theme.light.background.yellow,
+            "nightBlue" : theme.light.text.blueTheme
           },
         },
         "textScheme":{

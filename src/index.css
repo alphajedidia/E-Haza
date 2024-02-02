@@ -12,11 +12,11 @@
     }
   
       .input {
-          @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3
+          @apply bg-gray-50 border border-gray-300 text-colorScheme-light-nightBlue text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3
       }
   
       .label {
-          @apply block mb-2 font-medium text-gray-900 text-opacity-75
+          @apply block mb-2 font-medium text-opacity-75 text-colorScheme-light-nightBlue
       }
     .btn-large {
       @apply w-large
@@ -75,6 +75,10 @@
     color-scheme: light dark;
     background-color: #f2f2f2;
 }
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .swiper {
   width: 100%;
@@ -84,3 +88,5 @@
 .swiper-slide {
   overflow: hidden;
 }
+
+
